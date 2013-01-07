@@ -42,8 +42,8 @@ class CreateCategoriesController < ApplicationController
   # POST /create_categories.json
   def create
     @create_category = CreateCategory.new(params[:create_category])
-
-   
+    Rails.logger.info("Error is: #{@create_category.errors}")
+    
 
     respond_to do |format|
       if @create_category.save
