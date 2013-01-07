@@ -5,6 +5,11 @@
 </p>
 
 <table>
+<% if @posts.empty? %>
+<tr>
+    <td><b>This category has no post.</b></td>
+  </tr>
+<% else %>	
 <% @posts.each do |post| %>
   <tr>
     <td><b>Title: <%= post.title %></b></td>
@@ -14,6 +19,7 @@
   </tr>
   <tr></tr><tr></tr><tr></tr>
  <% end %>
+<% end %> 
 </table>
 
 <br/>

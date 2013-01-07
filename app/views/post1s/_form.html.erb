@@ -18,8 +18,7 @@
 
 <div class="field">
   <%= f.label :category %><br />
-<%= f.select(:category , ['Tell me your achievements !','Whats on your mind, I m ur friend !','What makes me Sad !']                          ,{ :multiple => true, :size => 3 }
-                                 ) %>
+<%= f.select(:category , categories() ,{ :multiple => true, :size => 3 } ) %>
 </div>
 
 
@@ -29,7 +28,7 @@
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Create Post") %>
   </div>
 <% end %>
 
